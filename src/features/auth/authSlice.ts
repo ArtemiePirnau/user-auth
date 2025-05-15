@@ -55,8 +55,8 @@ const authSlice = createSlice({
          })
          .addCase(userLogin.fulfilled, (state, { payload }) => {
             state.loading = false;
-            state.userInfo = payload;
             state.userToken = payload.userToken;
+            // state.userInfo = payload.user;
          })
          .addCase(userLogin.rejected, (state, action: PayloadAction<string | undefined>) => {
             (state.loading = true), (state.error = action.payload || 'Register Failed');

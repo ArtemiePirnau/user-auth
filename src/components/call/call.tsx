@@ -4,10 +4,10 @@ import './call.scss';
 
 const Call: React.FC = () => {
    return (
-      <section className="chat pt">
-         <div className="chat__left ">
-            <h5 className="chat__title">Call Logs</h5>
-            <form className="chat__search">
+      <section className="call-log pt">
+         <div className="call-log__left ">
+            <h5 className="call-log__title">Call Logs</h5>
+            <form className="call-log__search">
                <div className="form__search">
                   <button className="form__btn">
                      <svg
@@ -36,43 +36,43 @@ const Call: React.FC = () => {
                   <input className="form__input" type="text" name="name" placeholder="Search..." />
                </div>
             </form>
-            <h6 className="chat__label">All Logs</h6>
-            <ul className="chat__list">
-               <li className="chat__item">
-                  <img src={profile} alt="user" className="chat__item-img" />
-                  <div className="chat__item-info">
-                     <p className="chat__item-name">Artemie</p>
-                     <p className="chat__item-msg">Let's go for a walk</p>
+            <h6 className="call-log__label">All Logs</h6>
+            <ul className="call-log__list">
+               <li className="call-log__item">
+                  <img src={profile} alt="user" className="call-log__item-img" />
+                  <div className="call-log__item-info">
+                     <p className="call-log__item-name">Artemie</p>
+                     <p className="call-log__item-msg">Let's go for a walk</p>
                   </div>
-                  <p className="chat__item-time">12:02</p>
+                  <p className="call-log__item-time">12:02</p>
                </li>
-               <li className="chat__item">
-                  <img src={profile} alt="user" className="chat__item-img" />
-                  <div className="chat__item-info">
-                     <p className="chat__item-name">Pizdet</p>
-                     <p className="chat__item-msg">Caroci azi go gym</p>
+               <li className="call-log__item">
+                  <img src={profile} alt="user" className="call-log__item-img" />
+                  <div className="call-log__item-info">
+                     <p className="call-log__item-name">Pizdet</p>
+                     <p className="call-log__item-msg">Caroci azi go gym</p>
                   </div>
-                  <p className="chat__item-time">12:02</p>
+                  <p className="call-log__item-time">12:02</p>
                </li>
-               <li className="chat__item">
-                  <img src={profile} alt="user" className="chat__item-img" />
-                  <div className="chat__item-info">
-                     <p className="chat__item-name">Vitalie</p>
-                     <p className="chat__item-msg">Let's go for a walk</p>
+               <li className="call-log__item">
+                  <img src={profile} alt="user" className="call-log__item-img" />
+                  <div className="call-log__item-info">
+                     <p className="call-log__item-name">Vitalie</p>
+                     <p className="call-log__item-msg">Let's go for a walk</p>
                   </div>
-                  <p className="chat__item-time">12:02</p>
+                  <p className="call-log__item-time">12:02</p>
                </li>
             </ul>
          </div>
-         <div className="chat__right">
-            <div className="chat__right-info">
-               <img src={profile} alt="user" className="chat__item-img" />
-               <div className="chat__right-user">
-                  <p className="chat__right-name">Devin O'Reilly</p>
-                  <p className="chat__right-state">Online</p>
+         <div className="call-log__right">
+            <div className="call-log__right-info">
+               <img src={profile} alt="user" className="call-log__item-img" />
+               <div className="call-log__right-user">
+                  <p className="call-log__right-name">Devin O'Reilly</p>
+                  <p className="call-log__right-state">Online</p>
                </div>
-               <div className="chat__right-menu">
-                  <button className="chat__menu-item">
+               <div className="call-log__right-menu">
+                  <button className="call-log__menu-item">
                      <svg
                         width="24"
                         height="24"
@@ -96,7 +96,7 @@ const Call: React.FC = () => {
                         />
                      </svg>
                   </button>
-                  <button className="chat__menu-item">
+                  <button className="call-log__menu-item">
                      <svg
                         width="24"
                         height="24"
@@ -111,7 +111,7 @@ const Call: React.FC = () => {
                         />
                      </svg>
                   </button>
-                  <button className="chat__menu-item">
+                  <button className="call-log__menu-item">
                      <svg
                         width="24"
                         height="24"
