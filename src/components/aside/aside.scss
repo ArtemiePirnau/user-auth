@@ -1,0 +1,16 @@
+.logo {
+   display: block;
+   margin-bottom: 30px;
+}
+.aside {
+   padding: 15px;
+   margin-right: 20px;
+   &__icon {
+      display: block;
+      width: 45px;
+      height: 45px;
+   }
+   &__icon + &__icon {
+      margin-top: 50px;
+   }
+}

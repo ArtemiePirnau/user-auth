@@ -1,0 +1,109 @@
+// Chat Left
+.chat {
+   display: flex;
+   width: 100%;
+   // left part
+   &__left {
+      min-width: 300px;
+      //min-width: 100%;
+      min-height: 100vh;
+      margin-right: 20px;
+      border-right: 1px solid rgba(gray, 0.3);
+   }
+   &__list {
+      padding: 0px 10px 10px 0;
+   }
+   &__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 20px;
+   }
+   &__search {
+      border-bottom: 1px solid rgba(gray, 0.3);
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+   }
+   &__label {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 30px;
+   }
+   &__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+   }
+   &__item-info {
+      margin-right: auto;
+   }
+   &__item + &__item {
+      margin-top: 40px;
+   }
+   &__item-img {
+      margin-right: 15px;
+   }
+   &__item-name {
+      font-size: 14px;
+      font-weight: 500;
+   }
+   &__item-msg,
+   &__item-name,
+   &__item-time {
+      font-size: 14px;
+   }
+
+   // right part
+   &__right {
+      width: 100%;
+   }
+   &__right-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(gray, 0.3);
+   }
+   &__right-user {
+      margin-right: 100px;
+      margin-right: auto;
+   }
+   &__menu-item {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+   }
+   &__menu-item + &__menu-item {
+      margin-left: 30px;
+   }
+   &__right-menu {
+      margin-right: 30px;
+   }
+   &__right-name {
+      font-weight: 500;
+      margin-bottom: 10px;
+   }
+   &__right-state {
+      font-size: 14px;
+   }
+}
+
+// Form,
+.form {
+   &__btn {
+      border: none;
+      background-color: transparent;
+   }
+   &__btn-img {
+      width: 20px;
+      margin-right: 10px;
+   }
+   &__search {
+      display: flex;
+      align-items: center;
+   }
+   &__input {
+      font-family: 'Work Sans', sans-serif;
+      border: none;
+      color: #000;
+   }
+}

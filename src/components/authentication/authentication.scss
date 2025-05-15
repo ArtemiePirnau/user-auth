@@ -1,0 +1,20 @@
+.authentication {
+   width: 100%;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.menu {
+   display: flex;
+}
+.menu li + li {
+   margin-left: 50px;
+}
+.menu li a {
+   font-size: 20px;
+   text-transform: uppercase;
+   font-weight: 700;
+   border-bottom: 1px solid #000;
+}
