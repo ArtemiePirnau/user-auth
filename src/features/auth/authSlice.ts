@@ -10,11 +10,20 @@ interface AuthState {
    success: boolean;
 }
 
+// const userToken = localStorage.getItem('userToken') ? localStorage.getItem('userToken') : null;
+// const userInfo = localStorage.getItem('userInfo')
+//    ? JSON.parse(localStorage.getItem('userInfo') as string)
+//    : null;
+
 const userToken = localStorage.getItem('userToken') ? localStorage.getItem('userToken') : null;
+
+const userInfo = localStorage.getItem('userInfo')
+   ? JSON.parse(localStorage.getItem('userInfo') as string)
+   : null;
 
 const initialState: AuthState = {
    loading: false,
-   userInfo: {},
+   userInfo,
    userToken,
    error: null,
    success: false,
@@ -26,6 +35,7 @@ const authSlice = createSlice({
    reducers: {
       logout: (state) => {
          localStorage.removeItem('userToken');
+         localStorage.removeItem('userInfo');
          state.loading = false;
          state.userInfo = null;
          state.userToken = null;
@@ -45,6 +55,8 @@ const authSlice = createSlice({
                (state.success = true),
                (state.userInfo = payload), // register successfully
                (state.userToken = payload.userToken);
+            localStorage.setItem('userToken', payload.userToken);
+            localStorage.setItem('userInfo', JSON.stringify(payload));
          })
          .addCase(registerUser.rejected, (state, action: PayloadAction<string | undefined>) => {
             (state.loading = false), (state.error = action.payload || 'Register Failed');
@@ -55,8 +67,11 @@ const authSlice = createSlice({
          })
          .addCase(userLogin.fulfilled, (state, { payload }) => {
             state.loading = false;
+            state.userInfo = payload;
             state.userToken = payload.userToken;
-            // state.userInfo = payload.user;
+
+            localStorage.setItem('userToken', payload.userToken);
+            localStorage.setItem('userInfo', JSON.stringify(payload));
          })
          .addCase(userLogin.rejected, (state, action: PayloadAction<string | undefined>) => {
             (state.loading = true), (state.error = action.payload || 'Register Failed');

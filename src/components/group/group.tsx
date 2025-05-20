@@ -5,10 +5,10 @@ import './group.scss';
 
 const Group: React.FC = () => {
    return (
-      <section className="group pt">
-         <div className="group__left ">
-            <h5 className="group__title">Groups</h5>
-            <form className="group__search">
+      <section className="chat pt">
+         <div className="chat__left ">
+            <h5 className="chat__title">Groups</h5>
+            <form className="chat__search">
                <div className="form__search">
                   <button className="form__btn">
                      <svg
@@ -37,31 +37,31 @@ const Group: React.FC = () => {
                   <input className="form__input" type="text" name="name" placeholder="Search..." />
                </div>
             </form>
-            <h6 className="group__label">All Groups</h6>
-            <ul className="group__list">
-               <li className="group__item">
-                  <img src={profile} alt="user" className="group__item-img" />
-                  <div className="group__item-info">
-                     <p className="group__item-name">Artemie</p>
-                     <p className="group__item-msg">Let's go for a walk</p>
+            <h6 className="chat__label">All Groups</h6>
+            <ul className="chat__list">
+               <li className="chat__item">
+                  <img src={profile} alt="user" className="chat__item-img" />
+                  <div className="chat__item-info">
+                     <p className="chat__item-name">Artemie</p>
+                     <p className="chat__item-msg">Let's go for a walk</p>
                   </div>
-                  <p className="group__item-time">12:02</p>
+                  <p className="chat__item-time">12:02</p>
                </li>
-               <li className="group__item">
-                  <img src={profile} alt="user" className="group__item-img" />
-                  <div className="group__item-info">
-                     <p className="group__item-name">Pizdet</p>
-                     <p className="group__item-msg">Caroci azi go gym</p>
+               <li className="chat__item">
+                  <img src={profile} alt="user" className="chat__item-img" />
+                  <div className="chat__item-info">
+                     <p className="chat__item-name">Pizdet</p>
+                     <p className="chat__item-msg">Caroci azi go gym</p>
                   </div>
-                  <p className="group__item-time">12:02</p>
+                  <p className="chat__item-time">12:02</p>
                </li>
-               <li className="group__item">
-                  <img src={profile} alt="user" className="group__item-img" />
-                  <div className="group__item-info">
-                     <p className="group__item-name">Vitalie</p>
-                     <p className="group__item-msg">Let's go for a walk</p>
+               <li className="chat__item">
+                  <img src={profile} alt="user" className="chat__item-img" />
+                  <div className="chat__item-info">
+                     <p className="chat__item-name">Vitalie</p>
+                     <p className="chat__item-msg">Let's go for a walk</p>
                   </div>
-                  <p className="group__item-time">12:02</p>
+                  <p className="chat__item-time">12:02</p>
                </li>
             </ul>
          </div>

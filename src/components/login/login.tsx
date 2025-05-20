@@ -22,10 +22,6 @@ const Login: React.FC = () => {
    const dispatch = useDispatch<AppDispatch>();
    const navigate = useNavigate();
 
-   const submitForm: SubmitHandler<LoginFormInputs> = (data) => {
-      console.log(data.email, data.password);
-   };
-
    useEffect(() => {
       if (userInfo) {
          navigate('/user-profile');

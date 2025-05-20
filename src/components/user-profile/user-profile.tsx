@@ -13,7 +13,7 @@ const UserProfile = () => {
    const { data, isFetching } = useGetUserDetailsQuery(undefined, {
       pollingInterval: 900000,
    });
-   console.log(data);
+   //console.log(data); // undefined hz de ce
 
    useEffect(() => {
       if (data) dispatch(setCredentials(data));
@@ -35,7 +35,7 @@ const UserProfile = () => {
                      Logout
                   </button>
                ) : (
-                  <NavLink className="user-profile__button" to="/login">
+                  <NavLink className="user-profile__button" to="/authentication/login">
                      Login
                   </NavLink>
                )}
