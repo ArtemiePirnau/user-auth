@@ -38,6 +38,8 @@ export const userLogin = createAsyncThunk<UserResponse, LogInParams, { rejectVal
          );
          console.log('Response received:', data);
          localStorage.setItem('userToken', data.userToken);
+         //TODO: Posibil ca asa avem nevoie s a fac si asta in register
+         localStorage.setItem('userInfo', JSON.stringify(data.user));
          return data;
       } catch (error: any) {
          console.error('Error during request:', error);

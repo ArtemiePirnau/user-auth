@@ -10,6 +10,7 @@ import Settings from '../settings/settings';
 import Register from '../register/register';
 import Call from '../call/call';
 import UserProfile from '../user-profile/user-profile';
+import ChatSocket from '../chat-socket/chat-socket';
 import './app.scss';
 import ProfileScreen from '../profile-screen/profile-screen';
 
@@ -38,7 +39,7 @@ const App: React.FC = () => {
 
          <Routes>
             <Route path="/" element={<ProfileScreen />} />
-            <Route path="/chat" element={<Chat />} />
+            <Route path="/chat" element={<ChatSocket />} />
             <Route path="/group" element={<Group />} />
             <Route path="/call" element={<Call />} />
             <Route path="/settings" element={<Settings />} />
@@ -51,3 +52,4 @@ const App: React.FC = () => {
    );
 };
 export default App;
+//TODO: De inteles ce de facut mai departe

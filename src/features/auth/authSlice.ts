@@ -21,9 +21,19 @@ const userInfo = localStorage.getItem('userInfo')
    ? JSON.parse(localStorage.getItem('userInfo') as string)
    : null;
 
+// const initialState: AuthState = {
+//    loading: false,
+//    userInfo,
+//    userToken,
+//    error: null,
+//    success: false,
+// };
+
 const initialState: AuthState = {
    loading: false,
-   userInfo,
+   userInfo: localStorage.getItem('userInfo')
+      ? JSON.parse(localStorage.getItem('userInfo')!)
+      : null,
    userToken,
    error: null,
    success: false,
